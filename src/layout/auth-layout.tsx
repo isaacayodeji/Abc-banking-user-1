@@ -10,7 +10,7 @@ export const AuthLayout: React.FC = () => {
     <div className="h-[full] grid grid-rows-[4rem_1fr] ">
       <header className="flex items-center justify-between px-10">
         <h2 className="font-bold text-[22px] font-[gelionRegular] text-orange-600">
-          Ziculture Banking & Groups
+          Abc bank
         </h2>
         <div className="items-center gap-2 hidden lg:flex">
           <p className="text-[#333333] font-[gelionLight] font-bold">

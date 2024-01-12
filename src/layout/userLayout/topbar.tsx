@@ -147,14 +147,16 @@ const Topbar = () => {
   return (
     <header className="lg:border-[#c4c4c4] flex justify-between items-center px-3 md:px-10">
       <div className="flex justify-between  w-full items-center">
-        <h2 className="font-extrabold text-[20px] text-orange-600">
-          Ziculture Bank
-        </h2>
+        <h2 className="font-extrabold text-[20px] text-orange-600">Abc bank</h2>
         <div className="flex gap-4 max-lg:hidden">
           <Transfer />
         </div>
         <div className="flex gap-5 items-center pr-2 max-lg:hidden">
-          <motion.span initial='hidden' animate='visible' transition={{duration:0.5}} >
+          <motion.span
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5 }}
+          >
             <img src={notify} alt="" />
           </motion.span>
           <b>{`${userInfo.firstName?.toLocaleUpperCase()} ${userInfo.middleName?.toLocaleUpperCase()}`}</b>

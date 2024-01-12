@@ -118,7 +118,7 @@ const Topbar = () => {
     <header className="lg:border-[#c4c4c4] lg:border flex justify-between items-center px-3 md:px-10">
       <div className="flex justify-between  w-full items-center">
         <h2 className="font-extrabold lg:text-[20px] text-orange-600 ">
-          Ziculture Bank
+          Abc bank
         </h2>
         <div className="flex gap-4 max-lg:hidden">
           <Deposit />
