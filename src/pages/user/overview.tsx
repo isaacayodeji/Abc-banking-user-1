@@ -12,7 +12,7 @@ import useOverdraft from "../../hooks/useOverdraft";
 
 const UserOverview = () => {
   useLayoutEffect(() => {
-    document.title = "Overview | Ziculture ";
+    document.title = "Overview | Abc ";
   }, []);
 
   const { userInfo } = useUserInfo();
@@ -65,7 +65,6 @@ const UserOverview = () => {
   ];
   return (
     <div>
-      
       <h2 className="border-b border-[#c4c4c4] py-5 flex justify-between items-center font-bold text-[20px]">
         Overview
       </h2>

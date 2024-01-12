@@ -9,7 +9,7 @@ import jsPDF from "jspdf";
 
 const UserTransaction = () => {
   useLayoutEffect(() => {
-    document.title = "Transaction | Ziculture ";
+    document.title = "Transaction | Abc ";
   }, []);
 
   const { userInfo } = useUserInfo();

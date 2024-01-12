@@ -7,7 +7,7 @@ import { ColumnProps } from "mdb-react-ui-kit/dist/types/free/layout/Column/type
 
 const Account: React.FC = () => {
   useLayoutEffect(() => {
-    document.title = "Account | Ziculture ";
+    document.title = "Account | Abc ";
   }, []);
 
   // const state = useAppSelector((state) => {

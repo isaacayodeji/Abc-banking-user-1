@@ -3,7 +3,7 @@ import React, { useLayoutEffect } from "react";
 
 export const PageNotFound: React.FC = () => {
   useLayoutEffect(() => {
-    document.title = "Page Not Found | Ziculture ";
+    document.title = "Page Not Found | Abc ";
   }, []);
 
   return (

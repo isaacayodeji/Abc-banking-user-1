@@ -11,7 +11,7 @@ import { Spin } from "antd";
 
 const Overview: React.FC = () => {
   useLayoutEffect(() => {
-    document.title = "Overview | Ziculture ";
+    document.title = "Overview | Abc ";
   }, []);
 
   const [response, setResponse] = useState();

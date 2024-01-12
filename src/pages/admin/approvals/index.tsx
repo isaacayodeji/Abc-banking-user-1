@@ -10,7 +10,7 @@ import useApproval from "../../../hooks/useApproval";
 
 const Approval: React.FC = () => {
   useLayoutEffect(() => {
-    document.title = "Approval | Ziculture ";
+    document.title = "Approval | Abc ";
   }, []);
 
   const { HandlePost, result } = useApproval();
