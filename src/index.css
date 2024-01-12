@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1, h2, h3, p {
+  font-family: "Inter", sans-serif;
+  font-family: "Inter Tight", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  
+}
+body{
+   font-family: "Inter", sans-serif;
+  font-family: "Inter Tight", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+* {
+  /* font-family: "gelionRegular"; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  display: none;
+}
+
+::-webkit-scrollbar-track:hover {
+  display: block;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  display: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+  display: block;
+}
+.ant-menu-title-content{
+color: black;
+}
+.ant-menu-title-content::after{
+  color: orange;
+}
+.ant-menu-title-content::before{
+  color: orange;
+}
