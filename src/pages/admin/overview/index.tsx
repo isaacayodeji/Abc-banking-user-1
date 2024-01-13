@@ -35,8 +35,8 @@ const Overview: React.FC = () => {
   let details = result?.data?.data;
 
   return (
-    <div>
-      <h2 className="border-b border-[#c4c4c4] py-5 flex justify-between items-center font-bold text-[20px]">
+    <div className="md:pl-10 pl-2">
+      <h2 className="border-b border-[#c4c4c4] py-5 px-4 flex justify-between items-center font-bold text-[20px] bg-[#f7cb9f] w-[100%] rounded-l-full">
         Overview
       </h2>
       {/* Parent container */}
@@ -51,7 +51,12 @@ const Overview: React.FC = () => {
             <div className="space-y-2">
               <img src={icon1} alt="" />
               <p className="text-[19px] font-medium">Total Users</p>
-              <b className="text-[22px]">{details?.totalUser}</b>
+              <b className="text-[22px]">
+                {details?.totalUser.toLocaleString("en-UK", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
+              </b>
             </div>
           </div>
           {/* row2 */}
@@ -59,7 +64,13 @@ const Overview: React.FC = () => {
             <div className="space-y-2">
               <img src={icon3} alt="" />
               <p className="text-[19px] font-medium">Deposit</p>
-              <b className="text-[22px]">£ {details?.totalCredit} </b>
+              <b className="text-[22px]">
+                £{" "}
+                {details?.totalCredit.toLocaleString("en-UK", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}{" "}
+              </b>
             </div>
           </div>
           {/* row3 */}
@@ -67,7 +78,13 @@ const Overview: React.FC = () => {
             <div className="space-y-2">
               <img src={icon2} alt="" />
               <p className="text-[19px] font-medium">withdraw</p>
-              <b className="text-[22px]">£ {details?.totalDebit}</b>
+              <b className="text-[22px]">
+                £{" "}
+                {details?.totalDebit.toLocaleString("en-UK", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
+              </b>
             </div>
           </div>
           {/* row4 */}
@@ -75,13 +92,19 @@ const Overview: React.FC = () => {
             <div className="space-y-2">
               <img src={icon4} alt="" />
               <p className="text-[19px] font-medium">Overdraft</p>
-              <b className="text-[22px]">£ {details?.totalOverDraft}</b>
+              <b className="text-[22px]">
+                £{" "}
+                {details?.totalOverDraft.toLocaleString("en-UK", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
+              </b>
             </div>
           </div>
         </div>
       )}
 
-      <div className="flex gap-4 lg:hidden">
+      <div className="flex gap-4 ">
         <Withdraw />
         <Deposit />
       </div>

@@ -12,7 +12,7 @@ export const getThemeConfig = (state: string): ThemeConfig | undefined => {
       },
       Menu: {
         colorItemBgSelected: "#ffffff",
-        colorItemTextSelected: "#4da6ff",
+        colorItemTextSelected: "#ff9933",
         colorSubItemBg: "#ffffff",
         controlHeightLG: 40,
         lineWidth: 0,

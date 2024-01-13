@@ -80,8 +80,8 @@ const Account: React.FC = () => {
   ];
 
   return (
-    <div>
-      <h2 className="border-b border-[#c4c4c4] py-5 flex justify-between items-center font-bold text-[20px]">
+    <div className="md:pl-10 pl-2">
+      <h2 className="border-b border-[#c4c4c4] py-5 px-4 flex justify-between items-center font-bold text-[20px] bg-[#f7cb9f] w-[100%] rounded-l-full">
         Account
       </h2>
       <div className="grid md:flex md:items-center justify-between gap-5 pt-5 py-5">

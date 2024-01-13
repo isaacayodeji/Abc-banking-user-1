@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Transfer from "./transfer";
 import { CiLogout } from "react-icons/ci";
 import {
@@ -144,12 +144,38 @@ const Topbar = () => {
     localStorage.clear();
     navigate("/");
   };
+  const navLinkStyle = ({ isActive }: any) => {
+    return {
+      borderColor: isActive ? "#f7cb9f" : "",
+      fontWeight: isActive ? "bold" : "normal",
+      color: isActive ? "rgb(234 88 12)" : "",
+    };
+  };
   return (
-    <header className="lg:border-[#c4c4c4] flex justify-between items-center px-3 md:px-10">
+    <header className="lg:border-[#c4c4c4] flex justify-between items-center mx-3 my-3 md:px-10 ">
       <div className="flex justify-between  w-full items-center">
         <h2 className="font-extrabold text-[20px] text-orange-600">Abc bank</h2>
-        <div className="flex gap-4 max-lg:hidden">
-          <Transfer />
+        <div className="max-lg:hidden">
+          <ul className="flex gap-6">
+            <li>
+              <NavLink
+                className="hover:border hover:border-[#f7cb9f] px-4 py-2 hover:rounded-lg"
+                to={"/user/overview"}
+                style={navLinkStyle}
+              >
+                Overview
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="hover:border hover:border-[#f7cb9f] px-4 py-2 hover:rounded-lg"
+                to={"/user/transaction"}
+                style={navLinkStyle}
+              >
+                Transaction
+              </NavLink>
+            </li>
+          </ul>
         </div>
         <div className="flex gap-5 items-center pr-2 max-lg:hidden">
           <motion.span

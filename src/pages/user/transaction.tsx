@@ -193,8 +193,8 @@ const UserTransaction = () => {
     },
   ];
   return (
-    <div>
-      <h2 className="border-b border-[#c4c4c4] py-5 flex justify-between items-center font-bold text-[20px]">
+    <div className="pl-10">
+      <h2 className="border-b border-[#c4c4c4] py-5 px-4 flex justify-between items-center font-bold text-[20px] bg-[#f7cb9f] w-[100%] rounded-l-full">
         Transactions
       </h2>
       <div className="pt-8 border-b border-[#c4c4c4] flex justify-between">

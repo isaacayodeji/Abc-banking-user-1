@@ -43,7 +43,7 @@ function App() {
             <Route path="/user/reset-Password" element={<ResetPassword />} />
             </Route>
             {/* Admin */}
-            {/* <Route
+            <Route
               element={
                 <ProtectedRoutes>
                   <PageLayout />
@@ -58,7 +58,7 @@ function App() {
                 path="/admin/user-management"
                 element={<UserManagement />}
               />
-            </Route> */}
+            </Route>
             <Route path="*" element={<PageNotFound />} />
             {/* Users */}
             <Route
