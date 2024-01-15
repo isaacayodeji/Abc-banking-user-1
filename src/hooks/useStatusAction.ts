@@ -40,7 +40,7 @@ const useStatusAction = () => {
           ...state,
           url:
             action === "activate"
-              ? `Customer/ReActivateCustomerAccount${id}`
+              ? `Customer/ReActivateCustomerAccount/${id}`
               : action === "delete"
               ? `Customer/Delete/${id}`
               : `Customer/DeActivateCustomerAccount/${id}` || "",
