@@ -1,4 +1,4 @@
-import { Button, Col, Form, Input, Row, Spin, Table } from "antd";
+import { Button, Col, DatePicker, Form, Input, Row, Spin, Table } from "antd";
 import { ColumnProps } from "mdb-react-ui-kit/dist/types/free/layout/Column/types";
 import { useApi } from "../../hooks/useApi";
 import { useUserInfo } from "../../hooks/userInfo";
@@ -34,6 +34,9 @@ const UserTransaction = () => {
 
   let account = result?.data?.data?.accountNumber;
   const { response, isFetching } = useApi(
+    `Transaction/statement?accountNumber=${account}`
+  );
+  const { response:res, isFetching:fetch } = useApi(
     `Transaction/statement?accountNumber=${account}`
   );
 
@@ -207,14 +210,7 @@ const UserTransaction = () => {
                   rules={[{ required: true, message: "Start Date" }]}
                   name="startDate"
                 >
-                  <Input
-                    type="number"
-                    maxLength={10}
-                    // value={"email"}
-                    placeholder="MM/DD/YYYY"
-                    name="startDate"
-                    className=" py-2 min-w-[5rem] md:w-[12rem] h-10"
-                  />
+                  <DatePicker />
                 </Form.Item>
               </Col>
               <Col span={12}>
@@ -223,14 +219,7 @@ const UserTransaction = () => {
                   rules={[{ required: true, message: "End Date" }]}
                   name="endDate"
                 >
-                  <Input
-                    type="number"
-                    maxLength={10}
-                    // value={"email"}
-                    placeholder="MM/DD/YYYY"
-                    name="endDate"
-                    className=" py-2 min-w-[5rem] md:w-[12rem] h-10"
-                  />
+                  <DatePicker />
                 </Form.Item>
               </Col>
             </Row>

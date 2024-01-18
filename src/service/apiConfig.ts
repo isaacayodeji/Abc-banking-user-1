@@ -1,9 +1,8 @@
 import { Encryption } from "../fuction/encryption";
-import { Notify } from "../features/notification"; 
+import { Notify } from "../features/notification";
 import { fetchBaseQuery } from "@reduxjs/toolkit/query";
 
 export const baseUrl = process.env.REACT_APP_API_BASE_URL;
-console.log(process.env.REACT_APP_API_BASE_URL);
 
 type BaseQueryType = ReturnType<typeof fetchBaseQuery>;
 
@@ -31,9 +30,8 @@ export const baseQuery = fetchBaseQuery({
       if (token) headers.set("Authorization", `bearer ${token}`);
       return headers;
     } catch (error) {
-    //  Notify("You are Unauthorized to perform this task", false);
-    console.log(error);
-    
+      //  Notify("You are Unauthorized to perform this task", false);
+      console.log(error);
     }
   },
 });
